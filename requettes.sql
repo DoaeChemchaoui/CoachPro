@@ -45,6 +45,7 @@ CREATE TABLE disponibilite (
     heure_debut TIME,
     heure_fin TIME,
     etat VARCHAR(20) DEFAULT 'libre',
+    disponibilites VARCHAR(255) NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (id_coach) REFERENCES coach(id_coach) ON DELETE CASCADE
@@ -79,7 +80,7 @@ SELECT
 FROM reservation r
 JOIN sportif s ON r.id_sportif = s.id_sportif
 JOIN disponibilite d ON r.id_disponibilite = d.id_disponibilite
-WHERE r.id_coach = 1;  -- remplace 1 par l'id du coach
+WHERE r.id_coach = 1;  
 
 --  Lister toutes les réservations d’un sportif avec infos du coach
 SELECT 

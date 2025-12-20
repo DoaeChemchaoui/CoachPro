@@ -657,7 +657,7 @@ nav {
 }
 
 .no-data {
-    color: #999;
+    color: #383838;
     font-style: italic;
 }
 
@@ -896,3 +896,4 @@ footer .footer-bottom {
         justify-content: center;
     }
 }
+
